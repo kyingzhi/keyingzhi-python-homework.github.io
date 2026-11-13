@@ -1,0 +1,202 @@
+
+/* 1. 全局基础设置 */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    color: #263449;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+/* 2. 页面内容宽度 */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* 3. 导航栏 */
+
+.header {
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #244b7a;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #526174;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #2675c9;
+}
+
+/* 4. 首页介绍区域 */
+
+.hero {
+    padding: 110px 20px;
+    text-align: center;
+    background: #f3f7fc;
+}
+
+.subtitle {
+    color: #3978b9;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #327ac1;
+}
+
+.intro {
+    font-size: 21px;
+}
+
+.description {
+    color: #68778a;
+}
+
+/* 5. 按钮 */
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #327ac1;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #205c98;
+}
+
+/* 6. 内容区域 */
+
+.section {
+    padding: 75px 8%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.alternate {
+    background: #f7f9fc;
+    max-width: none;
+}
+
+/* 7. 卡片布局 */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 25px;
+    background: white;
+    border: 1px solid #e7ebf0;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.card h3 {
+    color: #315f91;
+}
+
+.card p {
+    color: #68778a;
+}
+
+/* 8. 项目标签 */
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 8px 5px 0 0;
+    background: #eaf2fc;
+    color: #327ac1;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* 9. 页脚 */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #8491a0;
+    background: #f3f5f8;
+}
+
+/* 10. 手机屏幕适配 */
+
+@media (max-width: 650px) {
+
+    .header .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding: 50px 7%;
+    }
+}
